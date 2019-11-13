@@ -1,16 +1,30 @@
 body {
     text-align: center;
+    background-color: #035353;
 }
 
 .container {
     margin-top: 3%;
-    background-color: #ebebeb;
+    background-color: #fafa96;
     padding-bottom: 3%;
+    font: #4d2600;
 }
 
 .generator {
     background-color: #ffffff;
+    font: #4d2600;
 }
 
+#password {
+    background-color: #fafa96;
+    font: 4em;
+    overflow: auto;
+    font: #4d2600;
+    
+}
 
+#generate {
+    background-color: #035353;
+    border-color: #4d2600;
+}
 

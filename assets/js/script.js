@@ -10,15 +10,12 @@ const symbolsArr = ["!", "@", "#", "$", "%", "&", "*", "?"]
 const numbersArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 generateBtn.addEventListener("click", function (event) {
-   
     //Final password variables
     let optionsWanted = "";
     let builtPasswordArr = [];
-
-  
+    
     //Questions for user to customize password
     let lengthWant = prompt("How many characters do you want (min 8, max 128)?");
-
     if (lengthWant >= 8 && lengthWant <= 128) {
         let symbolsWant = confirm("Do you want special characters included?");
         let numbersWant = confirm("Do you want numbers included?");
@@ -48,36 +45,15 @@ generateBtn.addEventListener("click", function (event) {
         }
 
         //Write builtPassword to passwordBox
-            let builtPassword = builtPasswordArr.join('');
-                passwordBox.innerHTML =builtPassword); 
-        
+        let builtPassword = builtPasswordArr.join('');
+        passwordBox.innerHTML = builtPassword; 
 
-
-
-
-    //Console.logs to see if things are working
-    console.log(lengthWant);
-    console.log(lowerWant);
-    console.log(upperWant);
-    console.log(symbolsWant);
-    console.log(numbersWant);
-
-    console.log(optionsWanted);
-    console.log(builtPassword);
-    console.log(builtPasswordArr);
-    console.log(builtPassword)
-    
-
-    
     } else {
         alert("Please enter a number between 8 and 128");
     }
-
-
 });
 
-
-//Possibly change passwordBox to builtPassword
+//Copy password to clipboard
 copyBtn.addEventListener("click", function () {
     passwordBox.select();
     document.execCommand("copy");
